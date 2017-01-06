@@ -1,0 +1,22 @@
+//Navbar
+@mixin icono-info {
+	font-size: 40px;
+	float: right;
+	margin: 20px;
+	color: $amarillo;
+}
+@mixin info {
+	position: absolute;
+	right: 90px;
+	top: 100px;
+	background-color: $blanco;
+	width: 300px;
+	text-align: center;
+}
+@mixin recuadrosBlancos {
+	background-color: $blanco;
+	padding: 5px 20px 20px;
+}
+@mixin botonesAmarillos {
+
+}

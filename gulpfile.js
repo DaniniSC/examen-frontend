@@ -13,6 +13,8 @@ var pngcrush = require('pngcrush');
 gulp.task('script', function(cb){
 	// tarea script
 	gulp.src('src/js/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
         // unir todos los archivos
         .pipe(concat('script.min.js'))
         // enfearlo (minimizarlo)

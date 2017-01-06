@@ -3,31 +3,97 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Examen Herramientas Productividad</title>
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
-	<title>Examen Herramientas Productividad</title>
-	<!--REQUIRED STYLE SHEETS-->
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
 		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<img src="dist/images/logo-gris.jpg" alt="">
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<span class="glyphicon glyphicon-info-sign iconoInfo" aria-hidden="true"></span>
+				</div>
+			</div>
 		</div>
 	</div><!--END NAV SECTION -->
-	<div id="home-sec">   
-		<div class="container"  >
-		</div>
-	</div><!--END HOME SECTION-->  
-	<section id="info"  >
-		<div class="container">
-		</div>
-	</section><!--END ABOUT SECTION-->
-	<section id="calculator" >
-		<div class="container">
-		</div>
-	</section><!--END PROJECT SECTION-->
-	<div id="footer">
-		2014 www.yourdomain.com | All Right Reserved  
-	</div><!-- END FOOTER SECTION -->
+	<div class="container">
+		<div id="home-sec">   
+			<div class="container"  >
+				<div class="row">
+					<div class="col-md-5 col-sm-12 col-xs-12" id="ruta">
+						<div class="seleccionaRuta">
+							<h3>ORIGEN</h3>
+							<select name="origen" id="selectOrigen">
+								<option value="0" selected>Selecciona una ciudad de origen</option>
+							</select>
+							<h3>DESTINO</h3>
+							<select name="destino" id="selectDestino" disabled>
+								<option value="0" selected>Selecciona una ciudad de destino</option>
+							</select>
+						</div>
+						<div class="botonBuscar negrita" disabled="disabled">
+							buscar
+						</div>					
+					</div>
+				</div>
+			</div>
+		</div><!--END HOME SECTION-->  
+		<!--<section id="info"  >
+			<div class="container">
+				<div class="cuadroInfo">
+					<img src="dist/images/logo-peach.jpg" alt="">
+					<p><span class="italica">La nueva forma de moverte en la ciudad. </span>Con <span class="negrita">carrocomp!</span> puedes compartir tu viaje con amigos y cobrar el costo equitativamente.</p>
+				</div>
+			</div>
+		</section>--><!--END ABOUT SECTION-->
+		<section id="calculator" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 col-sm-12 col-xs-12">
+						<h3>VEHICULO</h3>
+						<h4>seleccione</h4>
+						<table>
+							<tr>
+								<td><input type="radio" name="tipoVeh" value="moto"></td>
+								<td><img src="dist/images/moto.jpg" alt="Moto" class="imgVeh"></td>
+								<td><p class="Veh negrita">Motocicleta</p><p class="maxPasaj">máximo 2 pasajeros</p></td>
+								<td class="valorBencinaMoto"></td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="tipoVeh" value="auto"></td>
+								<td><img src="dist/images/auto.jpg" alt="Automóvil" class="imgVeh"></td>
+								<td><p class="Veh negrita">Automóvil</p><p class="maxPasaj">máximo 5 pasajeros</p></td>
+								<td class="valorBencinaAuto"></td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="tipoVeh" value="van"></td>
+								<td><img src="dist/images/van.jpg" alt="Minivan" class="imgVeh"></td>
+								<td><p class="Veh negrita">Minivan</p><p class="maxPasaj">máximo 10 pasajeros</p></td>
+								<td class="valorBencinaVan"></td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="tipoVeh" value="camion"></td>
+								<td><img src="dist/images/camion.jpg" alt="Camión" class="imgVeh"></td>
+								<td><p class="Veh negrita">Camión</p><p class="maxPasaj">máximo 3 pasajeros</p></td>
+								<td class="valorBencinaCamion"></td>
+							</tr>
+						</table>
+						<div>
+							<p class="negrita txtPasaj">Cantidad de pasajeros: </p>
+							<input type="text" class="nDePasaj">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--END PROJECT SECTION-->
+		<div id="footer">
+			2014 www.yourdomain.com | All Right Reserved  
+		</div><!-- END FOOTER SECTION -->
+	</div>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="dist/js/script.min.js"></script>

@@ -1,5 +1,5 @@
   /*CUSTOM LINKS SCROLLING FUNCTION */
-$(document).ready(function(){
+/*$(document).ready(function(){
   $('.navbar a[href*="#"]').on('click', function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var $target = $(this.hash);
@@ -11,4 +11,4 @@ $(document).ready(function(){
       }
     }
   });
-});
+});*/

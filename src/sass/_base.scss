@@ -1,7 +1,62 @@
+//general
+.negrita {
+	font-weight: bold;
+}
+.italica {
+	font-style: italic;
+}
 //Navbar
-
+.navbar {
+	background-color: $blanco;
+	img {
+		margin-top: 10px;
+		width: 50%;
+	}
+}
 //#home-sec
-
+body {
+	.navbar {
+		span {
+			@include icono-info;
+		}
+	}
+	background: url(../../dist/images/fondo-mapa.jpg);
+	background-size: cover;
+	#home-sec {
+		padding-top: 100px;
+		.row {
+			margin: 0;
+			#ruta {
+				margin: 0;
+				.seleccionaRuta {
+					@include recuadrosBlancos;
+				}
+				.botonBuscar {
+					color: $blanco;
+					background-color: $amarillo;
+					padding: 10px;
+					text-align: center;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+	#info {
+		@include info;
+		img {
+			width: 150px;
+		}
+	}
+	#calculator .row div {
+		@include recuadrosBlancos;
+		.imgVeh {
+			width: 120px;
+		}
+		.txtPasaj {
+			float: left;
+		}
+	}
+}
 //#info
 
 //#calculator
