@@ -5,6 +5,11 @@
 .italica {
 	font-style: italic;
 }
+.ocultar {
+	display: none;
+}
+
+
 //Navbar
 .navbar {
 	background-color: $blanco;
@@ -13,6 +18,8 @@
 		width: 50%;
 	}
 }
+
+
 //#home-sec
 body {
 	.navbar {
@@ -40,23 +47,26 @@ body {
 				}
 			}
 		}
-	}
-	#info {
-		@include info;
-		img {
-			width: 150px;
-		}
-	}
-	#calculator .row div {
-		@include recuadrosBlancos;
-		.imgVeh {
-			width: 120px;
-		}
-		.txtPasaj {
-			float: left;
-		}
+	}	
+}
+
+
+//#info
+#info {
+	@include info;
+	img {
+		width: 150px;
 	}
 }
-//#info
+
 
 //#calculator
+#calculator .row div {
+	@include recuadrosBlancos;
+	.imgVeh {
+		width: 120px;
+	}
+	.txtPasaj {
+		float: left;
+	}
+}

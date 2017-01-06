@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	//array con ciudades de chile
+
+	//NO MODIFICAR - array con ciudades de chile
 	var ciudades = [
 		{
 			name: "Arica",	
@@ -62,18 +63,21 @@ $(document).ready(function(){
 			distance: -3004
 		}
 	];
-	//se agregan options en el html
+
+	//NO MODIFICAR - se agregan options en el html
 	for (var i=0; i<ciudades.length; ++i){
 		$('#selectOrigen').append('<option value="' + ciudades[i].name + '">' + ciudades[i].name + '</option>');
 		$('#selectDestino').append('<option value="' + ciudades[i].name + '">' + ciudades[i].name + '</option>');
 	}
-	//se deshabilita el select Destino cuando el Origen ya está definido
+
+	//NO MODIFICAR - se deshabilita el select Destino cuando el Origen ya está definido
 	$('#selectOrigen').on('change', function(){
 		var valor = $('#selectOrigen').val();
 		if (valor !== "0"){
 			$('#selectDestino').prop('disabled', false);
 		}
 	});
+
 	//buscamos la ciudad (objeto)
 	$('#selectOrigen, #selectDestino').on('change', function(){
 		var valorOrigen = $('#selectOrigen').val();
@@ -91,17 +95,21 @@ $(document).ready(function(){
 				ciudadDestino = ciudades[i];
 			}
 		}
+		//función para quitar display none y seleccionar vehiculo
+		$('.botonBuscar').on('click', function(e){
+			$('#calculator').removeClass('ocultar');
+			//función para calcular valor de la bencina
+			var distanciaRuta = Math.abs(ciudadOrigen.distance - ciudadDestino.distance);
+			$('.valorBencinaMoto').append('$' + Math.round(distanciaRuta/21)*673);
+			$('.valorBencinaAuto').append('$' + Math.round(distanciaRuta/12)*673);
+			$('.valorBencinaVan').append('$' + Math.round(distanciaRuta/7)*673);
+			$('.valorBencinaCamion').append('$' + Math.round(distanciaRuta/6)*673);
+		});
 		//habilitamos el botón buscar si hay ambos select elegidos
 		$('.botonBuscar').prop('disabled', false);
 	});
 	//función para quitar display none y seleccionar vehiculo
 	$('.botonBuscar').on('click', function(e){
-		//$('#ruta .vehiculo').prop('display', );
+		$('#calculator').removeClass('ocultar');
 	});
-	//función para calcular valor de la bencina
-	var distanciaRuta = math.abs(ciudadOrigen.distance - ciudadDestino.distance);
-	$('.valorBencinaMoto').append('$' + (distanciaRuta/21)*673);
-	$('.valorBencinaAuto').append('$' + (distanciaRuta/12)*673);
-	$('.valorBencinaVan').append('$' + (distanciaRuta/7)*673);
-	$('.valorBencinaCamion').append('$' + (distanciaRuta/6)*673);
 });
