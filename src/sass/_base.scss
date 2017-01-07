@@ -1,4 +1,11 @@
 //general
+body {
+	background: url(../../dist/images/fondo-mapa.jpg);
+	background-size: cover;
+	.col-md-4 {
+		padding: 0;
+	}
+}
 .negrita {
 	font-weight: bold;
 }
@@ -8,65 +15,71 @@
 .ocultar {
 	display: none;
 }
-
+h3 {
+	font-family: "Courier New", Courier, monospace;
+}
+h4{
+	font-family: "Courier New", Courier, monospace;
+}
 
 //Navbar
 .navbar {
 	background-color: $blanco;
 	img {
 		margin-top: 10px;
-		width: 50%;
+		width: 200px;
+	}
+	span {
+		@include icono-info;
 	}
 }
 
 
-//#home-sec
-body {
-	.navbar {
-		span {
-			@include icono-info;
-		}
+//#home-sec	
+#home-sec{
+	padding-top: 50px;
+	.recuadroBlanco {
+		@include recuadrosBlancos;
 	}
-	background: url(../../dist/images/fondo-mapa.jpg);
-	background-size: cover;
-	#home-sec {
-		padding-top: 100px;
-		.row {
-			margin: 0;
-			#ruta {
-				margin: 0;
-				.seleccionaRuta {
-					@include recuadrosBlancos;
-				}
-				.botonBuscar {
-					color: $blanco;
-					background-color: $amarillo;
-					padding: 10px;
-					text-align: center;
-					vertical-align: middle;
-				}
-			}
-		}
+	.botonBuscar {
+		@include botonesAmarillos;
 	}	
 }
 
 
 //#info
-#info {
+/*#info {
 	@include info;
 	img {
 		width: 150px;
 	}
-}
+}*/
 
 
 //#calculator
-#calculator .row div {
-	@include recuadrosBlancos;
-	.imgVeh {
-		width: 120px;
+#calculator{
+	.recuadroBlanco {
+		@include recuadrosBlancos;
+		td {
+			padding: 0 10px;
+		}
+		.imgVeh {
+			width: 60px;
+		}
+		.Veh {
+			margin-bottom: 0;
+		}
+		.maxPasaj {
+			font-size: 11px;
+		}
+		.precios {
+			@include preciosAmarillos;
+		}
+		.txtPasaj {
+			float: left;
+		}
 	}
-	.txtPasaj {
-		float: left;
+	.botonCompartir {
+		@include botonesAmarillos;
 	}
 }

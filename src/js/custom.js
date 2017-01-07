@@ -78,7 +78,7 @@ $(document).ready(function(){
 		}
 	});
 
-	//buscamos la ciudad (objeto)
+	//NO MODIFICAR - buscamos la ciudad (objeto)
 	$('#selectOrigen, #selectDestino').on('change', function(){
 		var valorOrigen = $('#selectOrigen').val();
 		var valorDestino = $('#selectDestino').val();
@@ -100,10 +100,10 @@ $(document).ready(function(){
 			$('#calculator').removeClass('ocultar');
 			//función para calcular valor de la bencina
 			var distanciaRuta = Math.abs(ciudadOrigen.distance - ciudadDestino.distance);
-			$('.valorBencinaMoto').append('$' + Math.round(distanciaRuta/21)*673);
-			$('.valorBencinaAuto').append('$' + Math.round(distanciaRuta/12)*673);
-			$('.valorBencinaVan').append('$' + Math.round(distanciaRuta/7)*673);
-			$('.valorBencinaCamion').append('$' + Math.round(distanciaRuta/6)*673);
+			$('.valorBencinaMoto').append('<p class="precios"> $' + Math.round(distanciaRuta/21)*673 + '</p>');
+			$('.valorBencinaAuto').append('<p class="precios"> $' + Math.round(distanciaRuta/12)*673 + '</p>');
+			$('.valorBencinaVan').append('<p class="precios"> $' + Math.round(distanciaRuta/7)*673 + '</p>');
+			$('.valorBencinaCamion').append('<p class="precios"> $' + Math.round(distanciaRuta/6)*673 + '</p>');
 		});
 		//habilitamos el botón buscar si hay ambos select elegidos
 		$('.botonBuscar').prop('disabled', false);
@@ -112,4 +112,40 @@ $(document).ready(function(){
 	$('.botonBuscar').on('click', function(e){
 		$('#calculator').removeClass('ocultar');
 	});
+
+	//funcion para compartir carro
+	$('.botonCompartir').on('click', function(e){
+		var precioEnMoto = $('.valorBencinaMoto .precios');
+		var precioEnAuto = $('.valorBencinaAuto .precios');
+		var precioEnVan = $('.valorBencinaVan .precios');
+		var precioEnCamion = $('.valorBencinaCamion .precios');
+		var cantidadDePasajeros = $('.nDePasaj').val();
+		if (tipoVeh == 'moto'){
+			if (cantidadDePasajeros<=2){
+				alert('Costo por persona: $' + Math.round(precioEnMoto/cantidadDePasajeros) + ' CLP');
+			} else {
+				alert('Máximo 2 pasajeros');
+			}
+		} else if (tipoVeh == 'auto'){
+			if (cantidadDePasajeros<=5) {
+				alert('Costo por persona: $' + Math.round(precioEnAuto/cantidadDePasajeros) + ' CLP');
+			} else {
+				alert('Máximo 5 pasajeros');
+			}
+		} else if (tipoVeh == 'van'){
+			if (cantidadDePasajeros<=10) {
+				alert('Costo por persona: $' + Math.round(precioEnVan/cantidadDePasajeros) + ' CLP');
+			} else {
+				alert('Máximo 10 pasajeros');
+			}
+		} else if (tipoVeh == 'camion'){
+			if (cantidadDePasajeros<=3) {
+				alert('Costo por persona: $' + Math.round(precioEnCamion/cantidadDePasajeros) + ' CLP');
+			} else {
+				alert('Máximo 3 pasajeros');
+			}
+		} else {
+			return;
+		}
+	})
 });

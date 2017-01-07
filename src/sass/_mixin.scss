@@ -1,8 +1,8 @@
 //Navbar
 @mixin icono-info {
-	font-size: 40px;
+	font-size: 30px;
 	float: right;
-	margin: 20px;
+	margin: 10px;
 	color: $amarillo;
 }
 @mixin info {
@@ -15,8 +15,18 @@
 }
 @mixin recuadrosBlancos {
 	background-color: $blanco;
-	padding: 5px 20px 20px;
+	padding: 10px;
+	padding-top: 2px;
 }
 @mixin botonesAmarillos {
-
+	color: $blanco;
+	background-color: $amarillo;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+@mixin preciosAmarillos {
+	color: $amarillo;
+	font-weight: bold;
+	font-size: 18px;
 }
