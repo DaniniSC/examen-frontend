@@ -10,7 +10,7 @@
     "images": "gulp images",
     "default": "gulp",
     "clean": "git rm -rf dist",
-    "ci": "git add . && git commit -m 'Commit'",
+    "ci": "git add . && git commit -m \"Commit\" && git push origin master",
     "author": "echo \"author: Matias Bensan\" > author.txt"
   },
   "author": "",
