@@ -4,7 +4,14 @@
   "description": "Examen Frontend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script": "gulp script",
+    "style": "gulp style",
+    "images": "gulp images",
+    "default": "gulp",
+    "clean": "git rm -rf dist",
+    "ci": "git add . && git commit -m 'Commit'",
+    "author": "echo \"author: Matias Bensan\" > author.txt"
   },
   "author": "",
   "license": "ISC",
