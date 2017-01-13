@@ -8,6 +8,9 @@ var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('pngcrush');
+var express = require("express");
+var app = express();
+
 
 gulp.task('script', function(cb){
 	// tarea script
